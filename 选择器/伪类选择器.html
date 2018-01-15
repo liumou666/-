@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			/*在CSS里，所有索引值都是以1开头，不存在以0开头的情况*/
+			.s li:nth-child(1){
+				color: red;
+			}
+			
+			.s1 li:first-child{
+				color: red;
+			}
+			/*同类型下的第一个*/
+			.s2 li:first-of-type{
+				color: red;
+			}
+			.s3 li:last-child{
+				color: red;
+			}
+			.s3 li:last-of-type{
+				color: red;
+			}
+			/*该类型下面的第二个*/
+			.s4 li:nth-of-type(2){
+				color: red;
+			}
+			/*选中li，并且li是独一无二，没有兄弟姐妹*/
+			.s5 li:only-child{
+				color: red;
+			}
+			/*选中li，同类型里面只有一个的时候*/
+			.s6 li:only-of-type{
+				color: red;
+			}
+			/*结合锚点使用，当前锚点被选中的情况下触发该选择器*/
+			#demo:target{
+				background: red;
+			}
+			.s7:empty{
+				height: 500px;
+				width: 500px;
+				background: red;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="s" id="demo">
+			<ul>
+				<li>我是一道光</li>
+				<li>我是一道光</li>
+				<li>我是一道光</li>
+				<li>我是一道光</li>
+				<li>我是一道光</li>
+			</ul>
+		</div>
+		<div class="s1">
+			<ul>
+				<div>我是一道光</div>
+				<div>我是一道光</div>
+				<p>我是一道光</p>
+				<li>我是一道光</li>
+			</ul>
+		</div>
+		<div class="s2">
+			<ul>
+				<div>我是一道光</div>
+				<div>我是一道光</div>
+				<p>我是一道光</p>
+				<li>我是一道光</li>
+			</ul>
+		</div>
+		<div class="s3">
+			<ul>
+				<li>我是一道光</li>
+				<li>我是一道光</li>
+				<li>我是一道光</li>
+				<li>我是一道光</li>
+				<li>我是一道光</li>
+			</ul>
+		</div>
+		<div class="s4">
+			<ul>
+				<div>我是一道光</div>
+				<p>我是一道光</p>
+				<li>我是一道光</li>
+				<li>我是一道光</li>
+				<li>我是一道光</li>
+			</ul>
+		</div>
+		<div class="s5">
+			<ul>
+				<li>我是一道光</li>
+			</ul>
+		</div>
+		<div class="s6">
+			<ul>
+				<div>我是一道光</div>
+				<p>我是一道光</p>
+				<li>我是一道光</li>
+				<a href="#demo">请叫我光</a>
+			</ul>
+		</div>
+		<div class="s7"></div>
+	</body>
+</html>
+

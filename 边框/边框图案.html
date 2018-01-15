@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				margin: 70px;
+				float: left;
+			}
+			.a{
+				width: 0;
+				height: 0;
+				border-left: 50px solid transparent;
+				border-right: 50px solid transparent;
+				border-top: 100px solid red;
+				margin: 10 10 10;
+			}
+			.s{
+				position: relative;
+				width: 50px;
+				border-width: 50px 20px 0px;
+				border-style: solid;
+				border-color: red transparent;
+			}
+			.s::after{
+				content: '';
+				position: absolute;
+				height: 0;
+				width: 0;
+				top: -85px;
+				left: -20px;
+				border-width: 0 45px 35px;
+				border-style: solid;
+				border-color: transparent transparent red;
+			}
+			
+			
+		</style>
+	</head>
+	<body>
+		<div class="a"></div>
+		<div class="s"></div>
+		<div class="d"></div>
+		<div class="f"></div>
+		<div class="g"></div>
+	</body>
+</html>

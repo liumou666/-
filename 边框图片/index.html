@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.s{
+				height: 200px;
+				width: 200px;
+				/*想要设置边框图片，那么就要让边框变成玻璃，不能有颜色*/
+				border: 15px solid transparent;
+				border-image-source: url(border.png);
+				/*表示四个方向在图片上面分别截取30像素*/
+				/*标准写法*/
+				border-image-slice: 30;
+				/*平铺，不拉伸，不截断*/
+				/*border-image-repeat: round;*/
+				border-image-repeat: repeat;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="s"></div>
+	</body>
+</html>

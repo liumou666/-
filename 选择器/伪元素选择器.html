@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.s{
+				height: 300px;
+				width: 300px;
+				border: 1px solid red;
+				position: relative;
+			}
+			/*单冒号是伪类，双冒号，是伪元素，但是，浏览器的不断更新，变聪明了，因为狠毒程序员太蠢了*/
+			/*如果你写单冒号，也不会报错，因为浏览器会自动帮你识别成为双冒号，但是不代表单冒号是对的*/
+			/*在元素的后面新增一个伪元素*/
+			.s::after{
+				/*元素内容*/
+				content: '';
+				/*元素属性*/
+				height: 100px;
+				width: 100px;
+				background: aqua;
+				display: block;
+				position: absolute;
+				left: 300px;
+			}
+			.s::before{
+				/*元素内容*/
+				content: '';
+				/*元素属性*/
+				height: 100px;
+				width: 100px;
+				background: aqua;
+				display: block;
+				position: absolute;
+				left: 100px;
+			}
+			/*改变选中文字的样式*/
+			.s::selection{
+				background: #000;
+				color: #fff;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="s">
+			似懂非懂vgjapogjnaopgjaj[argj我怕死的分工阿萨德你配偶嚼苹果今年送顾客了解啊哈o-[anglkmn好当会计那女缴纳嗯；打扰你个；哦年纪该藕片GV爱上你就哪儿网络科技改变你说滴百]]
+		</div>
+	</body>
+</html>

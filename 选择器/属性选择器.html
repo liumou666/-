@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.s{
+				height: 200px;
+				width: 200px;
+			}
+			/*属性选择器，选择属性里面有name这个属性的标签*/
+			.s input[class]{
+				height: 50px;
+			}
+			/*表示单独的属性值，用空格分开*/
+			.s1 a[class ~= 'download']{
+				color: red;
+			}
+			/*表属性值和我们的内容完全相等，多一个字符少一个字符都不行*/
+			.s2 a[class = 'download']{
+				color: red;
+			}
+			/*要么是一个单独的属性值，要么用-分开*/
+			.s3 a[class |= 'download']{
+				color: red;
+			}
+			/*表示，主要属性值里面包含download，那么就被选选中*/
+			.s4 a[class *= 'download']{
+				color: red;
+			}
+			/*表示以download开头*/
+			.s5 a[class ^= 'download']{
+				color: red;
+			}
+			.s6 a[class $='download']{
+				color: red;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="s">
+			<form>
+				<ul>
+					<li>
+						用户名：<input class="568" type="text"  />
+					</li>
+					<li>
+						密码：<input type="password"  />
+					</li>
+					<li>
+						性别：<input type="radio" name="sex"  />男
+						<input type="radio" name="sex"  />女
+					</li>
+					<li>
+						爱好：<input type="checkbox"  />
+					</li>
+					<li>
+						<input type="submit"  />
+					</li>
+				</ul>
+			</form>
+		</div>
+		
+		<div class="s1">
+			<a href="a.avi" class="download. download-movie">下载</a>
+			<a href="b.avi" class="downloaddownload-movie">下载</a>
+			<a href="a.mp3" class="download download-music">下载</a>
+		</div>
+		<div class="s2">
+			<a href="a.avi" class="download download-movie">下载</a>
+			<a href="b.avi" class="download download-movie">下载</a>
+			<a href="a.mp3" class="download download-music">下载</a>
+		</div>
+		<div class="s3">
+			<a href="a.avi" class="download-movie">下载</a>
+			<a href="b.avi" class="download">下载</a>
+			<a href="a.mp3" class="download download-music">下载</a>
+		</div>
+		<div class="s4">
+			<a href="a.avi" class="downloaddownload-movie">下载</a>
+			<a href="b.avi" class="6546846adasddownload-movie">下载</a>
+			<a href="a.mp3" class="download downloadc">下载</a>
+		</div>
+		<div class="s5">
+			<a href="a.avi" class="ddownload-movie">下载</a>
+			<a href="b.avi" class="download download-movie">下载</a>
+			<a href="a.mp3" class="download-music">下载</a>
+		</div>
+		<div class="s6">
+			<a href="a.avi" class="download-movie download">下载</a>
+			<a href="b.avi" class="download download-movie">下载</a>
+			<a href="a.mp3" class="download download-music">下载</a>
+		</div>
+	</body>
+</html>

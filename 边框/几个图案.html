@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				margin: 70px;
+				float: left;
+			}
+			.a{
+				width: 0;
+				height: 0;
+				border-left: 50px solid transparent;
+				border-right: 50px solid transparent;
+				border-bottom: 100px solid red;
+			}
+			.s{
+				position: relative;
+				width: 54px;
+				border-width: 50px 18px 0;
+				border-style: solid;
+				border-color: red transparent;
+			}
+			.s::after{
+				content: '';
+				position: absolute;
+				height: 0;
+				width: 0;
+				top: -85px;
+				left: -18px;
+				border-width: 0 45px 35px;
+				border-style: solid;
+				border-color: transparent transparent red;
+			}
+			.d{
+				width: 100px;
+				height: 55px;
+				background: red;
+				position: relative;
+			}
+			.d::after{
+				content: '';
+				position: absolute;
+				width: 0;
+				height: 0;
+				border-left: 50px solid transparent;
+				border-right: 50px solid transparent;
+				border-top: 25px solid red;
+				bottom: -25px;
+				left: 0;
+			}
+			.d::before{
+				content: '';
+				position: absolute;
+				width: 0;
+				height: 0;
+				border-left: 50px solid transparent;
+				border-right: 50px solid transparent;
+				border-bottom: 25px solid red;
+				top: -25px;
+				left: 0;
+			}
+			.f{
+				width: 100px;
+				height: 100px;
+				background: red;
+				position: relative;
+			}
+			.f::before{
+				content: '';
+				position: absolute;
+				top: -1px;
+				left: 0px;
+				width: 40px;
+				height: 0;
+				border-bottom: 30px solid red;
+				border-left: 30px solid #fff;
+				border-right: 30px solid #fff;
+				
+			}
+			.f::after{
+				content: '';
+				position: absolute;
+				bottom: -1px;
+				left: 0px;
+				width: 40px;
+				height: 0;
+				border-top: 30px solid red;
+				border-left: 30px solid #fff;
+				border-right: 30px solid #fff;
+				
+			}
+			.g{
+				width: 0;
+				height: 0;
+				border-left: 50px solid transparent;
+				border-right: 50px solid transparent;
+				border-bottom: 100px solid red;
+				position: relative;
+				
+			}
+			.g::after{
+				content: '';
+				width: 0;
+				height: 0;
+				border-left: 50px solid transparent;
+				border-right: 50px solid transparent;
+				border-top: 100px solid red;
+				position: absolute;
+				top: 30px;
+				left: -50px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="a"></div>
+		<div class="s"></div>
+		<div class="d"></div>
+		<div class="f"></div>
+		<div class="g"></div>
+	</body>
+</html>
